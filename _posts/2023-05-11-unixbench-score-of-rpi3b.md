@@ -1,4 +1,4 @@
-UnixBench score for Raspberry Pi 3B+
+UnixBench score of Raspberry Pi 3B+
 -------------
 
                 
