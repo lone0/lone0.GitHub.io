@@ -1,5 +1,2 @@
-Here you can say lots of fun things about your site.
+Here I can say a bit of fun things about my work.
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
