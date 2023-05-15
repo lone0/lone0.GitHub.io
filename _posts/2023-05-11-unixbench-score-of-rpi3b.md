@@ -2,7 +2,6 @@ UnixBench score of Raspberry Pi 3B+
 -------------
 
     
-    
        #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
        #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
        #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
@@ -84,7 +83,6 @@ UnixBench score of Raspberry Pi 3B+
     System Benchmarks Index Score                                         365.9
     
     
-
 
 
 
