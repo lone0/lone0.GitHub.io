@@ -35,10 +35,14 @@ After the toolchain is availalbe, we build the following modules that make up th
     CROSS_COMPILE=~/riscv/th1520/toolchain-bin/bin/riscv64-unknown-linux-gnu- ARCH=riscv make light_lpi4a_defconfig
     CROSS_COMPILE=~/riscv/th1520/toolchain-bin/bin/riscv64-unknown-linux-gnu- ARCH=riscv make
 
+After a successful compilation, u-boot-with-spl.bin is generated, which can be burnt with fastboot.
 
 ## opensbi
 
     git clone https://github.com/revyos/thead-opensbi.git
+    CROSS_COMPILE=~/riscv/th1520/toolchain-bin/bin/riscv64-unknown-linux-gnu- ARCH=riscv make PLATFORM=generic
+
+After a successful compilation, build/platform/generic/firmware/fw_dynamic.bin is generated.
 
 
 ## Busybox
