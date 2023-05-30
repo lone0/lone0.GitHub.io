@@ -80,15 +80,18 @@ Save the output `./build/platform/generic/firmware/fw_dynamic.bin` for later use
 Before flashing the u-boot and kernel, let's take a look at the partitioning of Lichee Pi 4A.
 
 ```
-mmcblk0      179:0    0  7.3G  0 disk
-|- mmcblk0p1  179:1    0    2M  0 part
-|- mmcblk0p2  179:2    0  500M  0 part /boot
-\- mmcblk0p3  179:3    0  6.8G  0 part /
+NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+mmcblk0      179:0    0  7.3G  0 disk 
+|-mmcblk0p1  179:1    0    2M  0 part 
+|-mmcblk0p2  179:2    0  500M  0 part /boot
+`-mmcblk0p3  179:3    0  5.9G  0 part /
+mmcblk0boot0 179:8    0    4M  1 disk 
+mmcblk0boot1 179:16   0    4M  1 disk 
 ```
 
-The internal storage consists of an eMMC chip with three partitions. `mmcblk0p1` is a binary block storing u-boot-spl. `mmcblk0p2` holds an ext4 filesystem containing the Linux kernel and DTB files. `mmcblk0p3` is the rootfs, which we won't touch.
+The internal storage consists of an eMMC chip with five partitions. `mmcblk0p1` is for u-boot environment variables. `mmcblk0p2` holds an ext4 filesystem containing the Linux kernel and DTB files. `mmcblk0p3` is the rootfs, which we won't touch. `mmcblk0boot0` is where u-boot-spl lives.
 
-You can directly flash the u-boot-spl to `mmcblk0p1`. However, for the kernel, we need to create a filesystem image using a tool called `make_ext4fs`.
+You can directly flash the u-boot-spl to `mmcblk0boot0`. However, for the kernel, we need to create a filesystem image using a tool called `make_ext4fs`.
 
 To flash the device, the fastboot tool is provided, which is widely used in Android phones for low-level communication such as flashing firmware.
 
