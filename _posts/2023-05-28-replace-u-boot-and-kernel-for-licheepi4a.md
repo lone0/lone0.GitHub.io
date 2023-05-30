@@ -16,7 +16,7 @@ Before you can start building, you'll need a toolchain for the Xuantie C910 core
 git clone https://github.com/T-head-Semi/xuantie-gnu-toolchain.git
 cd xuantie-gnu-toolchain
 git submodule update --init
-./configure --prefix=~/riscv/xuantie-gnu-toolchain-bin/
+./configure --prefix=`realpath ~/riscv/xuantie-gnu-toolchain-bin/`
 make linux
 ```
 
